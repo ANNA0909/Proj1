@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <!--    // 2.4 Вывести в цикле четные и нечетные картинки (наши 11 картинок или другие). 
+    // С помощью стилей четным картинкам задать зеленую рамку, а нечетным - синюю.     -->
+
+<style>
+
+    section {
+        width: 1500px;
+        height: 1300px;
+        border: 1px solid royalblue;
+        margin: 0 auto;
+    }
+    /* добавить между картинками расстояние margin */
+    img {height: 250px; padding: 20px; transition: .3s ; margin: 10px;}
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 20px;
+    }
+
+</style>
+
+
+
+
+</head>
+<body>
+    <section>
+        <div id=pic></div>
+    </section>
+
+<script>
+    let s= '', n = '';
+    let a= 'green';
+    let b= 'blue';
+
+    for ( i=1; i<=11; i++) {
+            if (i%2 == 0)  n = a
+             else  n = b 
+        // s += '<img src="images/1.jpg" style="border:1px solid red">' // ДЛЯ СВЕРКИ     
+        s += '<img src="images/' + i +'.jpg" style="border:1px solid ' + n + ' ">'    
+    }
+  
+
+    pic.innerHTML = s
+
+
+</script>
+
+</body>
+</html>
